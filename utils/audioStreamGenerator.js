@@ -35,6 +35,7 @@ export function audioStreamGenerator(req, res, url, format) {
     "--no-progress",
     "--concurrent-fragments", "1",
     "--throttled-rate", "100K",
+    "--js-runtimes", "node",
     "-f", "bestaudio",
     "-o", "-",
     url,

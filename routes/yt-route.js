@@ -77,8 +77,8 @@ router.get("/stream/video", async (req, res) => {
 
   const ytdlp = spawn("yt-dlp", [
     "--no-playlist",
-    "-f",
-    "bestvideo[height<=720]+bestaudio/best",
+    "--js-runtimes", "node",
+    "-f", "bv*[height<=720]+ba/best",
     "-o",
     "-",
     url,
@@ -147,8 +147,8 @@ router.get("/stream/audio", async (req, res) => {
 
   const ytdlp = spawn("yt-dlp", [
     "--no-playlist",
-    "-f",
-    "bestaudio",
+    "--js-runtimes", "node",
+    "-f", "bestaudio",
     "-o",
     "-",
     url,

@@ -16,6 +16,7 @@ export function videoStreamGenerator(req, res, url, quality) {
     "--no-playlist",
     "--concurrent-fragments", "1",
     "--throttled-rate", "100K",
+    "--js-runtimes", "node",
     "-f", fmt,
     "-o", "-",
     url,

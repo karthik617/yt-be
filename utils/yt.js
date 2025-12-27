@@ -5,8 +5,7 @@ export default function ytdlpInfo(url) {
     execFile(
       "yt-dlp",
       [
-        "-J", // 🔑 JSON output
-        "--extractor-args", "youtube:player_client=android",                 
+        "-J", // 🔑 JSON output               
         "--no-playlist",
         "--skip-download",
         "--no-warnings",
